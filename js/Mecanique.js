@@ -13,9 +13,7 @@ class Mecanique{
     update(){
         this.canvas.context.clearRect(0, 0, this.l, this.h);
         this.plateau.dessinePlateau();
-        for(let i =0; i<this.bombs.length; i++){
-            this.bombs[i].dessineHuma();
-        };
+        this.dessinebombs();
         this.monstre.dessineHuma();
         this.heros.dessineHuma();
         this.collisions();
@@ -47,8 +45,13 @@ class Mecanique{
         for(let i=0; i<10; i++){
             this.bombe = new Bombes ("img/bomb.png", this.canvas.context);
             this.bombs.push(this.bombe);
-
         }
         return this.bombs;
+    }
+
+    dessinebombs(){
+        for(let i =0; i<this.bombs.length; i++){
+            this.bombs[i].dessineHuma();
+        };
     }
 }
