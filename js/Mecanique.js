@@ -25,6 +25,7 @@ class Mecanique{
             this.heros.x<=this.monstre.x+32 &&
             this.monstre.y-32<=this.heros.y &&
             this.heros.y<=this.monstre.y+32){
+             //   this.heros.initMove();
                 console.log("Gagné!");
         }
     }
@@ -35,7 +36,9 @@ class Mecanique{
                 this.heros.x<=this.bombs[i].x+32 &&
                 this.bombs[i].y-32<=this.heros.y &&
                 this.heros.y<=this.bombs[i].y+32){
+                  //  this.heros.initMove();
                     console.log("perdu!");
+
             }
         }
     }

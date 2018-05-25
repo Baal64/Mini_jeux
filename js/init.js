@@ -4,16 +4,16 @@ var mecanique = new Mecanique();
 function lancement(){
     mecanique.update();
     requestAnimationFrame(lancement);  
-}
+};
 
 lancement();
 
 addEventListener("keydown", function(e){
-    mecanique.heros.deplacement(e);//(e.keycode, true)
-})
+    mecanique.heros.avance(e);
+});
 
 addEventListener("keyup", function(e){
-    mecanique.heros.deplacement(e);//(e.keycode, false)
+    mecanique.heros.arret(e);
 })
 
 
