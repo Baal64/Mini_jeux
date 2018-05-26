@@ -3,7 +3,7 @@ class Mecanique{
     constructor(){
         this.canvas  = new Canvas ();
         this.plateau = new Plateau ("img/plateau.jpg", this.canvas.context);
-        this.monstre = new Monstre ("img/monster.png", this.canvas.context);
+        this.peach = new Peach ("img/Peach.png", this.canvas.context);
         this.heros   = new Heros ("img/Yoshi.png", this.canvas.context);
         this.bombs = [];
         this.creaBombes();
@@ -14,17 +14,17 @@ class Mecanique{
         this.canvas.context.clearRect(0, 0, this.l, this.h);
         this.plateau.dessinePlateau();
         this.dessinebombs();
-        this.monstre.dessineHuma();
+        this.peach.dessineHuma();
         this.heros.dessineHuma();
         this.collisions();
         this.collisionsBombs();
     }
 
     collisions(){
-        if (this.monstre.x-16<=this.heros.x &&
-            this.heros.x<=this.monstre.x+16 &&
-            this.monstre.y-32<=this.heros.y &&
-            this.heros.y<=this.monstre.y+16){
+        if (this.peach.x-16<=this.heros.x &&
+            this.heros.x<=this.peach.x+16 &&
+            this.peach.y-32<=this.heros.y &&
+            this.heros.y<=this.peach.y+16){
             this.heros.initMove();
                 console.log("Gagné!");
         }

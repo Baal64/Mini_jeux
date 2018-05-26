@@ -1,4 +1,4 @@
-class Monstre extends Humanoide{
+class Peach extends Humanoide{
     constructor(source, canvas, x, y){
         super(source, canvas, x, y);
         this.l=30;
