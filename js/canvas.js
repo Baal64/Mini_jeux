@@ -1,7 +1,7 @@
 class Canvas{
-    constructor(){       
-        this.l = window.innerWidth - 50;
-        this.h = window.innerHeight - 50;
+    constructor(){
+        this.h = (window.innerHeight - 20);
+        this.l = this.h;
         this.dessineCanvas();
     }
     //dessiner canvas dans dom

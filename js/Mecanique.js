@@ -2,9 +2,9 @@ class Mecanique{
 
     constructor(){
         this.canvas  = new Canvas ();
-        this.plateau = new Plateau ("img/CastleExample_3.png", this.canvas.context);
+        this.plateau = new Plateau ("img/super-mario-world-map-poster-1.jpg", this.canvas.context);
         this.monstre = new Monstre ("img/monster.png", this.canvas.context);
-        this.heros   = new Heros ("img/hero.png", this.canvas.context);
+        this.heros   = new Heros ("img/Yoshi.png", this.canvas.context);
         this.bombs = [];
         this.creaBombes();
         console.log(this.bombs);
@@ -25,7 +25,7 @@ class Mecanique{
             this.heros.x<=this.monstre.x+32 &&
             this.monstre.y-32<=this.heros.y &&
             this.heros.y<=this.monstre.y+32){
-             //   this.heros.initMove();
+            this.heros.initMove();
                 console.log("Gagné!");
         }
     }
@@ -36,7 +36,7 @@ class Mecanique{
                 this.heros.x<=this.bombs[i].x+32 &&
                 this.bombs[i].y-32<=this.heros.y &&
                 this.heros.y<=this.bombs[i].y+32){
-                  //  this.heros.initMove();
+                this.heros.initMove();
                     console.log("perdu!");
 
             }
