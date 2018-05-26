@@ -67,13 +67,14 @@ class Heros extends Humanoide {
 
     bruitsDePas(a) {
         let audio = new Audio("media/Pas.wav");
-
-        if (audio.playing) {
-            setTimeout(audio.play(), 500);
-            console.log("go");
-        } else {
+/*  Essayer d'utiliser stopPropagation sur l'event  du déplacement tant que pas false!!!
+        if (audio== false) {
             audio.play();
+            console.log("go");
+        } else if(audio== true){*/
+            setInterval(audio.play(), 500);
+            //audio.play().stopPropagation();
             console.log("hoho");
-        }
+        //}
     }
 };
