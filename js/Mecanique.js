@@ -2,7 +2,7 @@ class Mecanique{
 
     constructor(){
         this.canvas  = new Canvas ();
-        this.plateau = new Plateau ("img/super-mario-world-map-poster-1.jpg", this.canvas.context);
+        this.plateau = new Plateau ("img/plateau.jpg", this.canvas.context);
         this.monstre = new Monstre ("img/monster.png", this.canvas.context);
         this.heros   = new Heros ("img/Yoshi.png", this.canvas.context);
         this.bombs = [];
@@ -21,10 +21,10 @@ class Mecanique{
     }
 
     collisions(){
-        if (this.monstre.x-32<=this.heros.x &&
-            this.heros.x<=this.monstre.x+32 &&
+        if (this.monstre.x-16<=this.heros.x &&
+            this.heros.x<=this.monstre.x+16 &&
             this.monstre.y-32<=this.heros.y &&
-            this.heros.y<=this.monstre.y+32){
+            this.heros.y<=this.monstre.y+16){
             this.heros.initMove();
                 console.log("Gagné!");
         }
@@ -32,10 +32,10 @@ class Mecanique{
     
     collisionsBombs(){
         for(let i = 0; i< this.bombs.length; i++){
-            if (this.bombs[i].x-32<=this.heros.x &&
-                this.heros.x<=this.bombs[i].x+32 &&
-                this.bombs[i].y-32<=this.heros.y &&
-                this.heros.y<=this.bombs[i].y+32){
+            if (this.bombs[i].x-20<=this.heros.x &&
+                this.heros.x<=this.bombs[i].x+20 &&
+                this.bombs[i].y-20<=this.heros.y &&
+                this.heros.y<=this.bombs[i].y+20){
                 this.heros.initMove();
                     console.log("perdu!");
 
