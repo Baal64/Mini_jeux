@@ -1,5 +1,5 @@
-class Plateau{
-    constructor(src, canvas, x = 0, y = 0){
+class Plateau {
+    constructor(src, canvas, x = 0, y = 0) {
         this.x = x;
         this.y = y;
         this.h = (window.innerHeight - 20);
@@ -11,9 +11,14 @@ class Plateau{
             this.dessinePlateau();
         };
         this.img.src = src;
+        this.music = new Audio();
+        this.music.onload = () => {
+            this.pret = true;
+            this.musiquePlay();
+        }
     }
 
-    dessinePlateau(){
+    dessinePlateau() {
         this.canvas.drawImage(this.img, this.x, this.y, this.l, this.h);
     }
 }

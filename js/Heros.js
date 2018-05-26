@@ -1,16 +1,16 @@
-class Heros extends Humanoide{
+class Heros extends Humanoide {
 
-    constructor(source, canvas){
+    constructor(source, canvas) {
         super(source, canvas);
-        this.l=32;
-        this.h=32;
+        this.l = 32;
+        this.h = 32;
     };
 
-    initMove(){
-        this.up= false;
-        this.down= false;
-        this.right= false;
-        this.left= false;
+    initMove() {
+        this.up = false;
+        this.down = false;
+        this.right = false;
+        this.left = false;
     };
 
     avance(e) {
@@ -48,11 +48,11 @@ class Heros extends Humanoide{
         }
     };
 
-    deplacement(){
-        this.pas=10;
+    deplacement() {
+        this.pas = 10;
         if (this.up) {
             this.y -= this.pas;
-        } 
+        }
         if (this.down) {
             this.y += this.pas;
         }
@@ -62,7 +62,18 @@ class Heros extends Humanoide{
         if (this.right) {
             this.x += this.pas;
         }
+        this.bruitsDePas();
+    }
+
+    bruitsDePas(a) {
+        let audio = new Audio("media/Pas.wav");
+
+        if (audio.playing) {
+            setTimeout(audio.play(), 500);
+            console.log("go");
+        } else {
+            audio.play();
+            console.log("hoho");
+        }
     }
 };
-
-        

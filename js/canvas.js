@@ -1,11 +1,11 @@
-class Canvas{
-    constructor(){
+class Canvas {
+    constructor() {
         this.h = (window.innerHeight - 20);
         this.l = this.h;
         this.dessineCanvas();
     }
     //dessiner canvas dans dom
-    dessineCanvas(){
+    dessineCanvas() {
         this.canvas = document.createElement("canvas");
         this.canvas.width = this.l;
         this.canvas.height = this.h;

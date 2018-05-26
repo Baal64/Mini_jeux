@@ -1,6 +1,6 @@
-class Humanoide{
+class Humanoide {
 
-    constructor(src, canvas, x=0, y=0){
+    constructor(src, canvas, x = 0, y = 0) {
         this.x = x;
         this.y = y;
         this.canvas = canvas;
@@ -12,13 +12,13 @@ class Humanoide{
         };
         this.img.src = src;
     }
-    dessineHuma(){
+    dessineHuma() {
         this.canvas.drawImage(this.img, this.x, this.y);
     }
 
-    nouvellePosition(){
-        let xh = Math.ceil(Math.random() * (750-32));
-        let yh = Math.ceil(Math.random() * (600-32));
+    nouvellePosition() {
+        let xh = Math.ceil(Math.random() * (750 - 32));
+        let yh = Math.ceil(Math.random() * (600 - 32));
         this.x = xh;
         this.y = yh;
     }
