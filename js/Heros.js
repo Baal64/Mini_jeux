@@ -62,19 +62,21 @@ class Heros extends Humanoide {
         if (this.right) {
             this.x += this.pas;
         }
-        this.bruitsDePas();
+
     }
 
     bruitsDePas(a) {
+        removeEventListener("keydown", function (a) {
+            mecanique.heros.bruitsDePas(a);
+        });
         let audio = new Audio("media/Pas.wav");
-/*  Essayer d'utiliser stopPropagation sur l'event  du déplacement tant que pas false!!!
-        if (audio== false) {
-            audio.play();
-            console.log("go");
-        } else if(audio== true){*/
-            setInterval(audio.play(), 500);
-            //audio.play().stopPropagation();
-            console.log("hoho");
-        //}
+        audio.play();
+        setTimout("suite()", 1000);
+    }
+
+    suite(){
+        addEventListener("keydown", function (a) {
+            mecanique.heros.bruitsDePas(a);
+        });
     }
 };

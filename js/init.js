@@ -13,7 +13,7 @@ addEventListener("keydown", function (e) {
 addEventListener("keyup", function (e) {
     mecanique.heros.arret(e);
 });
-/*
-addEventListener("playing", function(a){
-    mecaniques.heros.bruitsDePas(a);
-});*/
+
+addEventListener("keydown", function (a) {
+    mecanique.heros.bruitsDePas(a);
+});
