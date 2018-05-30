@@ -1,17 +1,31 @@
+this.head = document.createElement('header');
+this.titreH1 = document.createElement('h1');
+this.nodeH1 = document.createTextNode("Yoshi save the queen!");
 
-var mecanique = new Mecanique(); 
+this.bodyB = document.body.appendChild(head);
+this.head.appendChild(titreH1);
+this.titreH1.appendChild(nodeH1);
 
-function lancement(){
+var mecanique = new Mecanique();
+
+function lancement() {
     mecanique.update();
-    requestAnimationFrame(lancement);  
-}
-
+    requestAnimationFrame(lancement);
+};
 lancement();
 
-addEventListener("keydown", function(e){
-    mecanique.heros.deplacement(e);//(e.keycode, true)
-})
+// addEventListener("keydown", function (e) {
+//     mecanique.yoshi.avance(e);
+// });
 
+// addEventListener("keyup", function (e) {
+//     mecanique.yoshi.arret(e);
+// });
 
+// addEventListener("keydown", function (a) {
+//     mecanique.yoshi.lance(a);
+// });
 
-
+// addEventListener("keyup", function (a) {
+//     mecanique.yoshi.arret(a);
+// });
