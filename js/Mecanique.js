@@ -4,41 +4,45 @@ class Mecanique {
         this.canvas = new Canvas();
         this.plateau = new Plateau("img/plateau.jpg", this.canvas.context);
         this.peach = new Peach("img/Peach.png", this.canvas.context);
-        this.heros = new Heros("img/Yoshi.png", this.canvas.context);
+        this.yoshi = new Yoshi("img/Yoshi.png", this.canvas.context);
         this.bombs = [];
         this.creaBombes();
         this.musicTheme = new Audio("media/MarioTheme.mp3");
         this.musicTheme.loop = true;
+        this.musicTheme.volume = 0.5;
         this.musicTheme.play();
     }
 
     update() {
         this.canvas.context.clearRect(0, 0, this.l, this.h);
+        this.yoshi.deplacement();
         this.plateau.dessinePlateau();
         this.dessinebombs();
         this.peach.dessineHuma();
-        this.heros.dessineHuma();
+        this.yoshi.dessineHuma();
         this.collisions();
         this.collisionsBombs();
     }
 
     collisions() {
-        if (this.peach.x - 16 <= this.heros.x &&
-            this.heros.x <= this.peach.x + 16 &&
-            this.peach.y - 32 <= this.heros.y &&
-            this.heros.y <= this.peach.y + 16) {
-            this.heros.initMove();
+        // Let reussi=
+        if (this.peach.x - 16 <= this.yoshi.x &&
+            this.yoshi.x <= this.peach.x + 16 &&
+            this.peach.y - 32 <= this.yoshi.y &&
+            this.yoshi.y <= this.peach.y + 16) {
+            // this.yoshi.initMove();
+
             console.log("Gagné!");
         }
     }
 
     collisionsBombs() {
         for (let i = 0; i < this.bombs.length; i++) {
-            if (this.bombs[i].x - 20 <= this.heros.x &&
-                this.heros.x <= this.bombs[i].x + 20 &&
-                this.bombs[i].y - 20 <= this.heros.y &&
-                this.heros.y <= this.bombs[i].y + 20) {
-                this.heros.initMove();
+            if (this.bombs[i].x - 20 <= this.yoshi.x &&
+                this.yoshi.x <= this.bombs[i].x + 20 &&
+                this.bombs[i].y - 20 <= this.yoshi.y &&
+                this.yoshi.y <= this.bombs[i].y + 20) {
+                // this.yoshi.initMove();
                 console.log("perdu!");
 
             }

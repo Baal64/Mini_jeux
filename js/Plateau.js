@@ -14,7 +14,7 @@ class Plateau {
         this.music = new Audio();
         this.music.onload = () => {
             this.pret = true;
-            this.musiquePlay();
+          // this.musiquePlay();
         }
     }
 
