@@ -14,18 +14,4 @@ function lancement() {
 };
 lancement();
 
-// addEventListener("keydown", function (e) {
-//     mecanique.yoshi.avance(e);
-// });
-
-// addEventListener("keyup", function (e) {
-//     mecanique.yoshi.arret(e);
-// });
-
-// addEventListener("keydown", function (a) {
-//     mecanique.yoshi.lance(a);
-// });
-
-// addEventListener("keyup", function (a) {
-//     mecanique.yoshi.arret(a);
-// });
+// yoshi.bruitsDePas();

@@ -7,7 +7,7 @@ class Mecanique {
         this.yoshi = new Yoshi("img/Yoshi.png", this.canvas.context);
         this.bombs = [];
         this.creaBombes();
-        this.musicTheme = new Audio("media/MarioTheme.mp3");
+        this.musicTheme = new Audio("media/yoshi's island.mp3");
         this.musicTheme.loop = true;
         this.musicTheme.volume = 0.5;
         this.musicTheme.play();
@@ -16,6 +16,7 @@ class Mecanique {
     update() {
         this.canvas.context.clearRect(0, 0, this.l, this.h);
         this.yoshi.deplacement();
+        this.yoshi.bruitsDePas();
         this.plateau.dessinePlateau();
         this.dessinebombs();
         this.peach.dessineHuma();

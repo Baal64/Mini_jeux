@@ -12,6 +12,10 @@ class Yoshi extends Humanoide {
             left : false
         };
         this.commande();
+        this.test();
+        this.inter = {
+            keydown : false
+        }
     };
 
     commande() {
@@ -65,32 +69,56 @@ class Yoshi extends Humanoide {
 
     };
 
-    bruitsDePas(a) {
-        removeEventListener("keydown", function (a) {
-            this.bruitsDePas(a);
-        });
-        let audio = new Audio("media/Pas.wav");
-        audio.play();
-        this.lance();
-    }
+    // test(){
+    //     let yoyo = this;// La modification du "this" en "let yoyo" à cause du changement de contexte     
+    //     window.addEventListener("keydown", function(a) {
+      
+    //         if (a.keyCode == 37) {
+    //             yoyo.inter = true;
+    //             a.preventDefault();
+    //             a.stopPropagation();
+    //         }
+    //         if (a.keyCode == 38) { //up
+    //             yoyo.inter = true;
+    //             a.preventDefault();
+    //             a.stopPropagation();
+    //         }
+    //         if (a.keyCode == 39) { //right
+    //             yoyo.inter = true;
+    //             a.preventDefault();
+    //             a.stopPropagation();
+    //         }
+    //         if (a.keyCode == 40) { //down
+    //             yoyo.inter = true;
+    //             a.preventDefault();
+    //             a.stopPropagation();
+    //         }
+    //     }), false;
 
-    lance(a) {
-        removeEventListener("keydown", function (a) {
-            mecanique.yoshi.lance(a);
-        });
-        //let audio = new Audio("media/Pas.wav");
-        let audio = new Audio("media/woodblock.mp3");
-        audio.play();
-    };
+        
+    //     window.addEventListener("keyup", function(a) {
+    //         if (a.keyCode == 37) {
+    //             yoyo.inter  = false;
+    //         }
+    //         if (a.keyCode == 38) {
+    //             yoyo.inter = false;
+    //         }
+    //         if (a.keyCode == 39) {
+    //             yoyo.inter = false;
+    //         }
+    //         if (a.keyCode == 40) {
+    //             yoyo.inter = false;
+    //         }
+    //     });
+    // }
 
-    arret(a) {
-        this.setTimout(this.suite(), 1000);
-    };
-
-    suite() {
-        addEventListener("keydown", function (a) {
-            mecanique.yoshi.lance(a);
-        });
-    }
-
+    // bruitsDePas() {  
+    //     let audio = new Audio("media/pas.wav");
+    //     if(this.inter) {
+    //         setTimeout(function() {
+    //          audio.play();
+    //         }, 1000);
+    //     }
+    // }
+       
 };
