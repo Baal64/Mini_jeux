@@ -1,6 +1,6 @@
 this.head = document.createElement('header');
 this.titreH1 = document.createElement('h1');
-this.nodeH1 = document.createTextNode("Yoshi save the queen!");
+this.nodeH1 = document.createTextNode("Yoshi saves the queen!");
 
 this.bodyB = document.body.appendChild(head);
 this.head.appendChild(titreH1);

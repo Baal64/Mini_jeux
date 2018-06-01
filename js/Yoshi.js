@@ -15,7 +15,7 @@ class Yoshi extends Humanoide {
     };
 
     commande() {
-        let yoyo = this;// La modification du "this" en "let yoyo" permet le fonctionnement de "direct"dans la foncion       
+        let yoyo = this;// La modification du "this" en "let yoyo" à cause du changement de contexte     
         window.addEventListener("keydown", function(e) {
             if (e.keyCode == 37) {
                 yoyo.direct.left = true;
@@ -65,31 +65,32 @@ class Yoshi extends Humanoide {
 
     };
 
-    // bruitsDePas(a) {
-    //     removeEventListener("keydown", function (a) {
-    //         this.bruitsDePas(a);
-    //     });
-    //     let audio = new Audio("media/Pas.wav");
-    //     audio.play();
-    //     this.lance();
-    // }
+    bruitsDePas(a) {
+        removeEventListener("keydown", function (a) {
+            this.bruitsDePas(a);
+        });
+        let audio = new Audio("media/Pas.wav");
+        audio.play();
+        this.lance();
+    }
 
-    // lance(a) {
-    //     removeEventListener("keydown", function (a) {
-    //         mecanique.yoshi.lance(a);
-    //     });
-    //     let audio = new Audio("media/Pas.wav");
-    //     audio.play();
-    // };
+    lance(a) {
+        removeEventListener("keydown", function (a) {
+            mecanique.yoshi.lance(a);
+        });
+        //let audio = new Audio("media/Pas.wav");
+        let audio = new Audio("media/woodblock.mp3");
+        audio.play();
+    };
 
-    // arret(a) {
-    //     this.setTimout(this.suite(), 1000);
-    // };
+    arret(a) {
+        this.setTimout(this.suite(), 1000);
+    };
 
-    // suite() {
-    //     addEventListener("keydown", function (a) {
-    //         mecanique.yoshi.lance(a);
-    //     });
-    // }
+    suite() {
+        addEventListener("keydown", function (a) {
+            mecanique.yoshi.lance(a);
+        });
+    }
 
 };
