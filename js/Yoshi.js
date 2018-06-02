@@ -12,7 +12,7 @@ class Yoshi extends Humanoide {
             left : false
         };
         this.commande();
-        this.test();
+        this.bruitPas();
         // this.inter = {
         //     keydown : false
         // }
@@ -65,11 +65,12 @@ class Yoshi extends Humanoide {
         }
         if (this.direct.right) {
             this.x += this.pas;
-        }
+        }//Limites
+        
 
     };
 
-    test(){
+    bruitPas(){
         let audio = new Audio("media/pas.wav");  
         audio.volume = 0.4;
         window.addEventListener("keydown", function(a) { 

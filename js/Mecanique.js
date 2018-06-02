@@ -13,6 +13,8 @@ class Mecanique {
         this.musicTheme.play();
         this.audioVictoire = new Audio("media/peach14.wav");
         this.audioDefaite = new Audio("media/yoshi09.wav");
+        this.colA = false;
+        this.colB = false; 
     }
 
     update() {
@@ -24,6 +26,7 @@ class Mecanique {
         this.yoshi.dessineHuma();
         this.collisions();
         this.collisionsBombs();
+        // this.colTest();
     }
 
     collisions() {
@@ -34,7 +37,7 @@ class Mecanique {
             this.yoshi.y <= this.peach.y + 16) {
             // this.yoshi.initMove();
             this.audioVictoire.play();
-            console.log("Gagné!");
+            //passer au niveau 2, + score incrémenté +=10, + bombes +=1
         }
     }
 
@@ -46,7 +49,6 @@ class Mecanique {
                 this.yoshi.y <= this.bombs[i].y + 20) {
                 // this.yoshi.initMove();
                 this.audioDefaite.play();
-                console.log("perdu!");
             }
         }
     }
@@ -65,4 +67,15 @@ class Mecanique {
             this.bombs[i].dessineHuma();
         };
     }
+
+    // colTest(){
+    //     if(this.colA){
+    //         // this.update.stopPropagation();
+    //         console.log("Gagné!");
+    //     }
+    //     if(this.colB){
+    //         // this.update.stopPropagation();
+    //         console.log("perdu!");
+    //     }
+    // }
 }
