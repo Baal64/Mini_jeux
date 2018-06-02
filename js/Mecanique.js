@@ -11,6 +11,8 @@ class Mecanique {
         this.musicTheme.loop = true;
         this.musicTheme.volume = 0.5;
         this.musicTheme.play();
+        this.audioVictoire = new Audio("media/peach14.wav");
+        this.audioDefaite = new Audio("media/yoshi09.wav");
     }
 
     update() {
@@ -31,7 +33,7 @@ class Mecanique {
             this.peach.y - 32 <= this.yoshi.y &&
             this.yoshi.y <= this.peach.y + 16) {
             // this.yoshi.initMove();
-
+            this.audioVictoire.play();
             console.log("Gagné!");
         }
     }
@@ -43,8 +45,8 @@ class Mecanique {
                 this.bombs[i].y - 20 <= this.yoshi.y &&
                 this.yoshi.y <= this.bombs[i].y + 20) {
                 // this.yoshi.initMove();
+                this.audioDefaite.play();
                 console.log("perdu!");
-
             }
         }
     }
