@@ -69,56 +69,56 @@ class Yoshi extends Humanoide {
 
     };
 
-    // test(){
-    //     let yoyo = this;// La modification du "this" en "let yoyo" à cause du changement de contexte     
-    //     window.addEventListener("keydown", function(a) {
+    test(){
+        let yoyo = this;// La modification du "this" en "let yoyo" à cause du changement de contexte     
+        window.addEventListener("keydown", function(a) {
       
-    //         if (a.keyCode == 37) {
-    //             yoyo.inter = true;
-    //             a.preventDefault();
-    //             a.stopPropagation();
-    //         }
-    //         if (a.keyCode == 38) { //up
-    //             yoyo.inter = true;
-    //             a.preventDefault();
-    //             a.stopPropagation();
-    //         }
-    //         if (a.keyCode == 39) { //right
-    //             yoyo.inter = true;
-    //             a.preventDefault();
-    //             a.stopPropagation();
-    //         }
-    //         if (a.keyCode == 40) { //down
-    //             yoyo.inter = true;
-    //             a.preventDefault();
-    //             a.stopPropagation();
-    //         }
-    //     }), false;
+            if (a.keyCode == 37) {
+                yoyo.inter = true;
+                a.preventDefault();
+                a.stopPropagation();
+            }
+            if (a.keyCode == 38) { //up
+                yoyo.inter = true;
+                a.preventDefault();
+                a.stopPropagation();
+            }
+            if (a.keyCode == 39) { //right
+                yoyo.inter = true;
+                a.preventDefault();
+                a.stopPropagation();
+            }
+            if (a.keyCode == 40) { //down
+                yoyo.inter = true;
+                a.preventDefault();
+                a.stopPropagation();
+            }
+        }), false;
 
         
-    //     window.addEventListener("keyup", function(a) {
-    //         if (a.keyCode == 37) {
-    //             yoyo.inter  = false;
-    //         }
-    //         if (a.keyCode == 38) {
-    //             yoyo.inter = false;
-    //         }
-    //         if (a.keyCode == 39) {
-    //             yoyo.inter = false;
-    //         }
-    //         if (a.keyCode == 40) {
-    //             yoyo.inter = false;
-    //         }
-    //     });
-    // }
+        window.addEventListener("keyup", function(a) {
+            if (a.keyCode == 37) {
+                yoyo.inter  = false;
+            }
+            if (a.keyCode == 38) {
+                yoyo.inter = false;
+            }
+            if (a.keyCode == 39) {
+                yoyo.inter = false;
+            }
+            if (a.keyCode == 40) {
+                yoyo.inter = false;
+            }
+        });
+    }
 
-    // bruitsDePas() {  
-    //     let audio = new Audio("media/pas.wav");
-    //     if(this.inter) {
-    //         setTimeout(function() {
-    //          audio.play();
-    //         }, 1000);
-    //     }
-    // }
+    bruitsDePas() {  
+        let audio = new Audio("media/pas.wav");
+        if(this.inter) {
+            setTimeout(function() {
+             audio.play();
+            }, 1000);
+        }
+    }
        
 };
