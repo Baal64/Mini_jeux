@@ -16,7 +16,6 @@ class Mecanique {
     update() {
         this.canvas.context.clearRect(0, 0, this.l, this.h);
         this.yoshi.deplacement();
-        this.yoshi.bruitsDePas();
         this.plateau.dessinePlateau();
         this.dessinebombs();
         this.peach.dessineHuma();
