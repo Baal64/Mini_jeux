@@ -70,16 +70,16 @@ class Yoshi extends Humanoide {
     };
 
     test(){
-        let yoyo = this;// La modification du "this" en "let yoyo" à cause du changement de contexte     
-        let audio = new Audio("media/pas.wav");
-        window.addEventListener("keydown", function(a) {
-            if (a.keyCode == 37||38||39||40) {
-                audio.play();
+        let audio = new Audio("media/pas.wav");  
+        audio.volume = 0.4;
+        window.addEventListener("keydown", function(a) { 
+            if (a.keyCode == 37||38||39||40) {             
                 a.preventDefault();
+                audio.play();  
               //  yoyo.inter = true;
             }
         });
- 
+        
         // window.addEventListener("keyup", function(a) {
         //     if (a.keyCode == 37||38||39||40) {
         //        // yoyo.inter  = false;
