@@ -13,8 +13,8 @@ class Mecanique {
         this.musicTheme.play();
         this.audioVictoire = new Audio("media/peach14.wav");
         this.audioDefaite = new Audio("media/yoshi09.wav");
-        this.colA = false;
-        this.colB = false; 
+        // this.colA = false;
+        // this.colB = false; 
     }
 
     update() {
