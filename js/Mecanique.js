@@ -12,9 +12,9 @@ class Mecanique {
         this.musicTheme.volume = 0.5;
         this.musicTheme.play();
         this.audioVictoire = new Audio("media/peach14.wav");
-        this.audioVictoire = 0.6;
+        // this.audioVictoire = 0.6;
         this.audioDefaite = new Audio("media/yoshi09.wav");
-        this.audioDefaite = 0.6;
+        // this.audioDefaite = 0.6;
         // this.colA = false;
         // this.colB = false; 
     }
